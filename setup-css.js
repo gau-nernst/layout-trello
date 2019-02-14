@@ -1,4 +1,4 @@
-var cssFile = chrome.extension.getURL('css/layout.css'),
+var cssFile = browser.extension.getURL('/css/layout.css'),
   board = document.getElementById('board'),
   classVertical = 'layout-trello-vertical',
   classMixed = 'layout-trello-mixed';
@@ -16,7 +16,7 @@ function insertCss() {
 
 insertCss();
 
-chrome.storage.sync.get('classList', function (result) {
+browser.storage.sync.get('classList', function (result) {
   if (result.classList) {
     board.classList.add(result.classList);
   }
