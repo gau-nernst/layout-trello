@@ -1,11 +1,10 @@
-var cssFile = browser.extension.getURL('/css/layout.css'),
-  board = document.getElementById('board'),
-  classVertical = 'layout-trello-vertical',
-  classMixed = 'layout-trello-mixed';
+let cssFile = browser.extension.getURL('/css/layout.css'),
+    board = document.getElementById('board'),
+    classFlex = 'layout-trello-grid';
 
 function insertCss() {
   if (document.getElementById('layoutcss') === null) {
-    var css = document.createElement('link');
+    let css = document.createElement('link');
     css.id = 'layoutcss';
     css.type = 'text/css';
     css.rel = 'stylesheet';

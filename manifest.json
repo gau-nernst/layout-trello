@@ -1,12 +1,15 @@
 {
   "manifest_version": 2,
-  "name": "List Layouts for Trello",
-  "description": "Allow Trello lists to be displayed vertically or in a grid.",
-  "version": "3.1",
-  "author": "Natalie Perna",
+  "name": "Trello Grid Layout",
+  "description": "Allow Trello boards to display in a grid.",
+  "version": "0.1",
+  "author": "Thien Tran",
+  "developer": {
+    "name": "Thien Tran",
+    "url": "https://github.com/gau-nernst"
+  },
   "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "48": "icon48.png"
   },
   "background": {
     "scripts": [
@@ -22,7 +25,8 @@
     "css/layout.css"
   ],
   "page_action": {
-    "default_title": "List Layouts for Trello"
+    "default_title": "Trello Grid Layout",
+    "default_icon": "icon48.png"
   },
   "commands": {
     "_execute_page_action": {
@@ -31,5 +35,9 @@
         "mac": "MacCtrl+Shift+L"
       }
     }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   }
 }

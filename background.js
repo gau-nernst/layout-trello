@@ -1,7 +1,7 @@
 browser.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   // Match Trello board pages only
-  var regex = new RegExp(/.*:\/\/trello\.com\/b\/.*/);
-  var match = regex.exec(tab.url);
+  let regex = new RegExp(/.*:\/\/trello\.com\/b\/.*/);
+  let match = regex.exec(tab.url);
 
   // Setup page for layout changes and show page action
   if (match) {
@@ -19,6 +19,6 @@ browser.pageAction.onClicked.addListener(function (tab) {
 
 browser.runtime.onInstalled.addListener(function (details) {
   if (details.reason ==  "update" && parseFloat(details.previousVersion) < 3) {
-    browser.tabs.create({'url': browser.extension.getURL('/changelog/changelog.html')});
+    browser.tabs.create({'url': browser.extension.getURL('changelog.html')});
   }
 });
